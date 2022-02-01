@@ -11,7 +11,7 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 
 <!-- code_chunk_output -->
 
-- [Day-1_Lectures](#day-1-lectures)
+- [Day-1 Lectures](#day-1-lectures)
 	- [STA Definition](#definition)
 	- [Timing Paths](#paths)
 	- [Timing path elements](#elements)
@@ -21,7 +21,7 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 	- [Clocks](#clocks)
 	- [Generated Clocks](#generated_clk)
 	- [Boundary Constraints](#boundary_constraints)
-- [Day-1_Labs](#day-1-labs)
+- [Day-1 Labs](#day-1-labs)
   - [OpenTimer Introduction](#ot_Intro)
   - [Understanding basics of OpenTimer](#ot_basics)
   - [Inputs to OpenTimer](#ot_inputs)
@@ -47,4 +47,12 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 <!-- /code_chunk_output -->
 
 ---
+
+# Day-1 Lectures
+## STA Definition
+
+There are various aspects of synthesis which are needed to be taken care beyond getting successful compilation and this workshop ensured we will get to know that and more. We started off with an introduction to invoking DC shell and, then Design Vision for a GUI flavor. Since the shell environment employs TCL commands, we were given a primer on utilising it in general and especially in Synopsys environment with an introduction to Synopsys propietary file formats, data structures and TCL commands. There are various flavours of the cells provided as for setup constraints you might need a performance oriented or fast implementation, but to take care of hold violations, you might require a slower variant of the same.
+
+## Timing Paths
+
 
