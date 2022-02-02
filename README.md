@@ -51,8 +51,9 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 # Day-1 Lectures
 ## STA Definition
 
-There are various aspects of synthesis which are needed to be taken care beyond getting successful compilation and this workshop ensured we will get to know that and more. We started off with an introduction to invoking DC shell and, then Design Vision for a GUI flavor. Since the shell environment employs TCL commands, we were given a primer on utilising it in general and especially in Synopsys environment with an introduction to Synopsys propietary file formats, data structures and TCL commands. There are various flavours of the cells provided as for setup constraints you might need a performance oriented or fast implementation, but to take care of hold violations, you might require a slower variant of the same.
+Static Timing Analysis is a method of verifying timing performance of a design. Its key feature is that it is exhaustive compared to functional simulation and SPICE simulation. It doesn't require testbenches and is not used for asynchronous design. It doesn't rely on imput vectors and is a mathematical technique going through all the paths. It doesn't verify functionality of the design. Its pessimistic and conservative so as to ensure there is a definite guard band for sign-off. Typical inputs for STA are netlist, SDC or constraints file, and logic libraries.
 
 ## Timing Paths
+
 
 
