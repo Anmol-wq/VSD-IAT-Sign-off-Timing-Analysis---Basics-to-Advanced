@@ -91,6 +91,23 @@ Combinational logic blocks are elements which have no memory, or internal state.
 
 Between a set of startpoint and endpoint, combinational logic might have multiple paths.
 
+## Setup & Hold Checks
+
+Setup time of a flop is dependent on the technology node. Value is available in logic libraries. This enforces max delay on the data path. Data should be available at the input of sequential device before clock edge that captures the data.
+
+![image](https://user-images.githubusercontent.com/73732594/152221237-7cc71843-1cef-44cc-b903-1275ad4b2ef3.png)
+
+Similarly hold time enforces min delay on the data path. Here, data should be stable at the input of sequential device for sometime after the clock edge that captures the data.
+
+![image](https://user-images.githubusercontent.com/73732594/152221593-aa146a22-398a-44af-a4cd-27f9db709c0a.png)
+
+ 
+
+ 
+ 
+
+
+
 
 
 
