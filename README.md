@@ -65,6 +65,32 @@ The illustrated timing paths for the former are as follows.
 
 The timing analysis is performed on each of these paths.
 
+## Timing path elements
+
+Broadly speaking, there are three components of the path, which are, startpoint, endpoint and combinational logic.
+
+Startpoint is where the data is launched by clock edge, or where the data must be available at a specific time. It is usually input port or register clock pin.
+
+![timing_paths_startpoint](https://user-images.githubusercontent.com/73732594/152147843-6aa33146-8fe0-48e6-bea1-f55e19a86118.png)
+
+![timing_paths_illustrated](https://user-images.githubusercontent.com/73732594/152146941-96eda29e-9930-455a-97a6-c7cc5888fcce.png)
+
+For path 3 the CLK pin acts as the startpoint, the clock pin is taken into account because CLK -> Q delay also comes into picture.
+
+Endpoints are where data is captured by clock edge, or where the data must be available at a specific time. It is usually output port or register data pin.
+
+![timing_paths_endpoint](https://user-images.githubusercontent.com/73732594/152150078-5f617b9d-e4d8-4241-8696-17f4681b8191.png)
+
+![timing_paths_illustrated](https://user-images.githubusercontent.com/73732594/152146941-96eda29e-9930-455a-97a6-c7cc5888fcce.png)
+
+For Path 1 the endpoint is the OUT port.
+
+Combinational logic blocks are elements which have no memory, or internal state. Ex.: AND gate, OR gate.
+
+![image](https://user-images.githubusercontent.com/73732594/152150767-53a44b3e-61ec-451b-9185-401d6bff34c6.png)
+
+Between a set of startpoint and endpoint, combinational logic might have multiple paths.
+
 
 
 
