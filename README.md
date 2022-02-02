@@ -117,6 +117,20 @@ Timing is met when slack is positive, otherwise it isn't.
 
 ## SDC Overview
 
+Synopsys Design Constraints (SDC) for timing specify parameters affecting operational frequency of the design. Examples: create_clock, create generated_clock, set_clock groups, set_clock_transition, set_timing_derate, etc.
+
+Similarly, there are constraints for area and power, which specify restrictions about the area and power. Examples: set_max_area, set_max_dynamic_power, etc. and constraints for design rules which are requirements of the target technology. Examples: set_max_capacitance, set_max_transition, set_max_fanout, etc. 
+
+![image](https://user-images.githubusercontent.com/73732594/152229305-fe96fbf0-5856-452f-ac50-7ee252fee69b.png)
+
+![image](https://user-images.githubusercontent.com/73732594/152229547-92c342da-9c4f-4fd5-a6cf-7d3b8cde17b9.png)
+
+There are exceptions to design constraints which relax the requirements set by other commands. Examples: set_false_path, set_multicycle_path, etc.
+
+
+
+
+
 
 
 
