@@ -51,9 +51,24 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 # Day-1 Lectures
 ## STA Definition
 
-Static Timing Analysis is a method of verifying timing performance of a design. Its key feature is that it is exhaustive compared to functional simulation and SPICE simulation. It doesn't require testbenches and is not used for asynchronous design. It doesn't rely on imput vectors and is a mathematical technique going through all the paths. It doesn't verify functionality of the design. Its pessimistic and conservative so as to ensure there is a definite guard band for sign-off. Typical inputs for STA are netlist, SDC or constraints file, and logic libraries.
+Static Timing Analysis (STA) is a method of verifying timing performance of a design. Its key feature is that it is exhaustive compared to functional simulation and SPICE simulation. It doesn't require testbenches and is not used for asynchronous design. It doesn't rely on imput vectors and is a mathematical technique going through all the paths. It doesn't verify functionality of the design. Its pessimistic and conservative so as to ensure there is a definite guard band for sign-off. Typical inputs for STA are netlist, SDC or constraints file, and logic libraries.
 
 ## Timing Paths
+
+STA breaks the paths at ports and sequential elements. We can see the sequential design below, where the input port, output port, clock port, D FFs along with some combinational logic are provided.
+
+![timing_paths](https://user-images.githubusercontent.com/73732594/152146866-7672ff33-34cd-43f1-b77c-705dddb616be.png)
+
+The illustrated timing paths for the former are as follows.
+
+![timing_paths_illustrated](https://user-images.githubusercontent.com/73732594/152146941-96eda29e-9930-455a-97a6-c7cc5888fcce.png)
+
+The timing analysis is performed on each of these paths.
+
+
+
+
+
 
 
 
