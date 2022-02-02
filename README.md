@@ -101,6 +101,32 @@ Similarly hold time enforces min delay on the data path. Here, data should be st
 
 ![image](https://user-images.githubusercontent.com/73732594/152221593-aa146a22-398a-44af-a4cd-27f9db709c0a.png)
 
+## Slack Calculation
+
+Setup Slack = Data Required Time - Data Arrival Time
+
+![image](https://user-images.githubusercontent.com/73732594/152223076-3592fd9d-e6a9-4aef-8ac7-20fe1ff30179.png)
+
+![image](https://user-images.githubusercontent.com/73732594/152223261-51bbe8a9-342f-4607-98a6-94cd2ee1e810.png)
+
+![image](https://user-images.githubusercontent.com/73732594/152223649-c6498fd7-dd4d-4a93-bf82-0c9521ae339a.png)
+
+Similarly slack is negative when data arrives later than required time.
+
+Timing is met when slack is positive, otherwise it isn't.
+
+## SDC Overview
+
+
+
+
+
+ 
+
+
+
+
+
  
 
  
