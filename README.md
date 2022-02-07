@@ -260,9 +260,13 @@ Tests          : 6
 Cells          : 105
 # Day-5_Labs
   ## Revisit slack computation
-  ## Clock properties
-  ## CRPR
+  ![Screenshot from 2022-02-07 23-48-15](https://user-images.githubusercontent.com/73732594/152848018-392cb1af-684d-4ef0-9329-735edb5ddcb1.png)
+
+  ## CPPR
+  ![Screenshot from 2022-02-07 23-50-44](https://user-images.githubusercontent.com/73732594/152848433-4f1a25bf-72fd-412b-8bf7-99f640e3a2ce.png)
+
   ## ECO
+  ![Screenshot from 2022-02-07 23-52-54](https://user-images.githubusercontent.com/73732594/152848638-09978f8d-a4ad-40e7-805c-a0c47cc9c6a0.png)
 
 
 
