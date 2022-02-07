@@ -229,6 +229,41 @@ Functionally, it might seem like the first path, corresponds to the slack comput
 
 ![Screenshot from 2022-02-07 23-09-25](https://user-images.githubusercontent.com/73732594/152842243-401bf7ff-c1e7-4bc6-97b1-e2c8348d17b4.png)
 
+# Day-4_Labs
+  ## Understanding clock gating check
+  ![Screenshot from 2022-02-07 23-37-03](https://user-images.githubusercontent.com/73732594/152846371-b79e12aa-b53e-466b-acff-fea2b30c7797.png)
+
+  ![Screenshot from 2022-02-07 23-29-38](https://user-images.githubusercontent.com/73732594/152846178-92c2bc06-8966-437f-a476-d6a535481247.png)
+
+  ## Understanding Async pin checks
+  
+  ![Screenshot from 2022-02-07 23-40-08](https://user-images.githubusercontent.com/73732594/152846814-6e7fc775-c548-4aca-b30e-264700bd9f6a.png)
+
+  ![Screenshot from 2022-02-07 23-41-26](https://user-images.githubusercontent.com/73732594/152847251-387876f0-df1d-4bd1-8fe0-735e81107fa4.png)
+  
+  ![Screenshot from 2022-02-07 23-42-41](https://user-images.githubusercontent.com/73732594/152847313-5bad3d31-481b-430d-b235-5210887bcb26.png) 
+
+OpenTimer 2.1.0
+Time unit        : 1e-12 s
+Capacitance unit : 1e-15 F
+Voltage unit     : 1 V
+Current unit     : 0.001 A
+Power unit       : 1e-06 W
+Pins           : 22
+POs            : 1
+PIs            : 6
+Gates          : 3
+Nets           : 19
+Arcs           : 25
+SCCs           : 0
+Tests          : 6
+Cells          : 105
+# Day-5_Labs
+  ## Revisit slack computation
+  ## Clock properties
+  ## CRPR
+  ## ECO
+
 
 
 
