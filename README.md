@@ -11,7 +11,7 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 
 <!-- code_chunk_output -->
 
-- [Day-1 Lectures](#day-1-lectures)
+- [Day-1 Summary](#day-1-summary)
 	- [STA Definition](#definition)
 	- [Timing Paths](#paths)
 	- [Timing path elements](#elements)
@@ -27,7 +27,7 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
   - [Inputs to OpenTimer](#ot_inputs)
   - [Constraints creation](#constraints)
   - [OpenTimer Run script](#ot_run)  
-- [Day-2_Lectures](#day-2-lectures)
+- [Day-2_Summary](#day-2-summary)
   - [Other timing checks](#other_timing_checks)
   - [Design Rule Checks](#drcs)
   - [Latch Timing](#latch_timing)
@@ -37,10 +37,34 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
   - [Understanding SPEF file and SPEF parsing](#understanding_spef_file_and_spef_parsing)
   - [Understanding OpenTimer tool messages](#understanding_opentimer_tool_messages)
   - [Understanding timing reports and timing graphs](#understanding_timing_reports_and_timing_graphs)
-  
- 
-
-
+- [Day-3_Summary](#day-3-summary)
+  - [Multiple Clocks](#multiple-clocks)
+  - [Timing arcs and Timing Sense](#timing-arcs)
+  - [Cell Delays and Clock Network](#cell-delays)
+  - [Setup and Hold Detailed](#setup-detailed)
+  - [STA Text Report](#sta-text)
+- [Day-3_Labs](#day-3-labs)
+  - [Understanding full reg to reg STA analysis](#reg-sta)
+  - [Understanding Slack computation](#slack-computation)
+- [Day-4_Summary](#day-4-summary)
+  - [Crosstalk and Noise](#crosstalk)
+  - [Operating modes and other variations](#operating-modes)
+  - [Cell Delays and Clock Network](#cell-delays)
+  - [Clock Gating Checks](#clock-gating)
+  - [Checks on Async Pins](#checks-async)
+- [Day-4_Labs](#day-4-labs)
+  - [Understanding clock gating check](#understanding-clock-gating)
+  - [Understanding Async pin checks](#understanding-async-check)
+- [Day-5_Summary](#day-5-summary)
+  - [Clock groups](#clockgp)
+  - [Clock properties](#clockproperties)
+  - [Timing exceptions](#timing-exceptions)
+  - [Multiple modes](#multi-modes)
+- [Day-5_Labs](#day-5-labs)
+  - [Revisit slack computation](#revisit-slack)
+  - [Clock properties](#clockproperties)
+  - [CRPR](#crpr)
+  - [ECO](#eco)
 - [Acknowledgements:](#acknowledgements)
 - [References:](#references)
 
