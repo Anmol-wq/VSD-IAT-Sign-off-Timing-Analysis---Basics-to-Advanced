@@ -160,11 +160,23 @@ The timing checks aren't met since the slack is negative.
 
 # Day-2 Labs
 
+## Liberty Files and Understanding Lib Parsing
+The .lib file is an ASCII representation of the timing and power
+parameters associated with any cell in a particular semiconductor
+technology The .lib file contains timing models and data to calculate I/O delay paths, Timing check values and Interconnect delays.
+
+Exercises:
+
+## Understanding SPEF file and SPEF parsing
+## Understanding OpenTimer tool messages
+## Understanding timing reports and timing graphs
+
+# Day-3 Labs
+
+## Understanding full reg to reg STA analysis
+## Understanding Slack computation
 
 
-
-
- 
 
 
 
