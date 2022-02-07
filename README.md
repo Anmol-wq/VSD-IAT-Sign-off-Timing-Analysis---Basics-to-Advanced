@@ -12,15 +12,7 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 <!-- code_chunk_output -->
 
 - [Day-1 Summary](#day-1-summary)
-	- [STA Definition](#definition)
-	- [Timing Paths](#paths)
-	- [Timing path elements](#elements)
-	- [Setup & Hold Checks](#checks)
-	- [Slack Calculation](#slack)
-	- [SDC Overview](#sdc)
-	- [Clocks](#clocks)
-	- [Generated Clocks](#generated_clk)
-	- [Boundary Constraints](#boundary_constraints)
+	
 - [Day-1 Labs](#day-1-labs)
   - [OpenTimer Introduction](#ot_Intro)
   - [Understanding basics of OpenTimer](#ot_basics)
@@ -28,38 +20,26 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
   - [Constraints creation](#constraints)
   - [OpenTimer Run script](#ot_run)  
 - [Day-2_Summary](#day-2-summary)
-  - [Other timing checks](#other_timing_checks)
-  - [Design Rule Checks](#drcs)
-  - [Latch Timing](#latch_timing)
-  - [STA Text Report](#sta_report)
+  
 - [Day-2_Labs](#day-2-labs)
   - [Liberty Files and Understanding Lib Parsing](#liberty_files_and_understanding_lib_parsing)
   - [Understanding SPEF file and SPEF parsing](#understanding_spef_file_and_spef_parsing)
   - [Understanding OpenTimer tool messages](#understanding_opentimer_tool_messages)
   - [Understanding timing reports and timing graphs](#understanding_timing_reports_and_timing_graphs)
 - [Day-3_Summary](#day-3-summary)
-  - [Multiple Clocks](#multiple-clocks)
-  - [Timing arcs and Timing Sense](#timing-arcs)
-  - [Cell Delays and Clock Network](#cell-delays)
-  - [Setup and Hold Detailed](#setup-detailed)
-  - [STA Text Report](#sta-text)
+ 
 - [Day-3_Labs](#day-3-labs)
   - [Understanding full reg to reg STA analysis](#reg-sta)
   - [Understanding Slack computation](#slack-computation)
+  
 - [Day-4_Summary](#day-4-summary)
-  - [Crosstalk and Noise](#crosstalk)
-  - [Operating modes and other variations](#operating-modes)
-  - [Cell Delays and Clock Network](#cell-delays)
-  - [Clock Gating Checks](#clock-gating)
-  - [Checks on Async Pins](#checks-async)
+  
 - [Day-4_Labs](#day-4-labs)
   - [Understanding clock gating check](#understanding-clock-gating)
   - [Understanding Async pin checks](#understanding-async-check)
+  
 - [Day-5_Summary](#day-5-summary)
-  - [Clock groups](#clockgp)
-  - [Clock properties](#clockproperties)
-  - [Timing exceptions](#timing-exceptions)
-  - [Multiple modes](#multi-modes)
+
 - [Day-5_Labs](#day-5-labs)
   - [Revisit slack computation](#revisit-slack)
   - [Clock properties](#clockproperties)
@@ -72,12 +52,9 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
 
 ---
 
-# Day-1 Lectures
-## STA Definition
+# Day-1 Summary
 
 Static Timing Analysis (STA) is a method of verifying timing performance of a design. Its key feature is that it is exhaustive compared to functional simulation and SPICE simulation. It doesn't require testbenches and is not used for asynchronous design. It doesn't rely on imput vectors and is a mathematical technique going through all the paths. It doesn't verify functionality of the design. Its pessimistic and conservative so as to ensure there is a definite guard band for sign-off. Typical inputs for STA are netlist, SDC or constraints file, and logic libraries.
-
-## Timing Paths
 
 STA breaks the paths at ports and sequential elements. We can see the sequential design below, where the input port, output port, clock port, D FFs along with some combinational logic are provided.
 
@@ -88,8 +65,6 @@ The illustrated timing paths for the former are as follows.
 ![timing_paths_illustrated](https://user-images.githubusercontent.com/73732594/152146941-96eda29e-9930-455a-97a6-c7cc5888fcce.png)
 
 The timing analysis is performed on each of these paths.
-
-## Timing path elements
 
 Broadly speaking, there are three components of the path, which are, startpoint, endpoint and combinational logic.
 
@@ -115,8 +90,6 @@ Combinational logic blocks are elements which have no memory, or internal state.
 
 Between a set of startpoint and endpoint, combinational logic might have multiple paths.
 
-## Setup & Hold Checks
-
 Setup time of a flop is dependent on the technology node. Value is available in logic libraries. This enforces max delay on the data path. Data should be available at the input of sequential device before clock edge that captures the data.
 
 ![image](https://user-images.githubusercontent.com/73732594/152221237-7cc71843-1cef-44cc-b903-1275ad4b2ef3.png)
@@ -124,8 +97,6 @@ Setup time of a flop is dependent on the technology node. Value is available in 
 Similarly hold time enforces min delay on the data path. Here, data should be stable at the input of sequential device for sometime after the clock edge that captures the data.
 
 ![image](https://user-images.githubusercontent.com/73732594/152221593-aa146a22-398a-44af-a4cd-27f9db709c0a.png)
-
-## Slack Calculation
 
 Setup Slack = Data Required Time - Data Arrival Time
 
@@ -139,8 +110,6 @@ Similarly slack is negative when data arrives later than required time.
 
 Timing is met when slack is positive, otherwise it isn't.
 
-## SDC Overview
-
 Synopsys Design Constraints (SDC) for timing specify parameters affecting operational frequency of the design. Examples: create_clock, create generated_clock, set_clock groups, set_clock_transition, set_timing_derate, etc.
 
 Similarly, there are constraints for area and power, which specify restrictions about the area and power. Examples: set_max_area, set_max_dynamic_power, etc. and constraints for design rules which are requirements of the target technology. Examples: set_max_capacitance, set_max_transition, set_max_fanout, etc. 
@@ -151,9 +120,45 @@ Similarly, there are constraints for area and power, which specify restrictions 
 
 There are exceptions to design constraints which relax the requirements set by other commands. Examples: set_false_path, set_multicycle_path, etc.
 
+# Day-1 Labs
 
+## OpenTimer Introduction
 
+OpenTimer is a new static timing analysis (STA) tool to help IC designers quickly verify the circuit timing. It is developed completely from the ground up using C++17 to efficiently support parallel and incremental timing. 
 
+Compile OpenTimer and launch the shell program ot-shell.
+
+## Understanding basics of OpenTimer
+
+![image](https://user-images.githubusercontent.com/73732594/152780811-db8cd8d6-5b3e-4932-a504-b1ab46e57eed.png)
+
+An STA tool takes design, standard cell, constraints as input and perform timing checks on the design. OpenTimer works on industry formats (e.g., .v, .spef, .lib, .sdc) and is designed to be parallel and portable.
+
+## Inputs to OpenTimer
+
+The inputs to the opentimer are design, standard cells associated with the netlist and the constraints.
+ 
+![Screenshot from 2022-02-07 13-33-42](https://user-images.githubusercontent.com/73732594/152804282-a78572ba-9ba0-4f8c-b8d6-5331f0b7b408.png)
+The Netlist for the lab.
+
+![Screenshot from 2022-02-07 13-33-42](https://user-images.githubusercontent.com/73732594/152804739-04a6178c-a739-4655-b760-b46288af2a59.png)
+A typical example for the standard cell from OSU-180.lib file.
+
+## Constraints creation
+
+The SDC file provided for the lab. This consists of the clock period, IO delays, input transition and capacitance delays. 
+![Screenshot from 2022-02-07 19-46-47](https://user-images.githubusercontent.com/73732594/152805399-8f6b8c8b-793b-4286-81aa-5d88c9deecd8.png)
+
+## OpenTimer Run script
+
+![Screenshot from 2022-02-07 19-53-25](https://user-images.githubusercontent.com/73732594/152807446-c8a6da52-7e15-4342-b0d1-dad8deb7080b.png)
+![Screenshot from 2022-02-07 20-01-22](https://user-images.githubusercontent.com/73732594/152807613-00e5c962-5d94-49b0-b1d2-c807d755e1bb.png)
+
+The timing checks aren't met since the slack is negative.
+
+![Screenshot from 2022-02-07 20-03-33](https://user-images.githubusercontent.com/73732594/152808162-776920d1-3ba1-449d-a0bf-13c76edbce7a.png)
+
+# Day-2 Labs
 
 
 
