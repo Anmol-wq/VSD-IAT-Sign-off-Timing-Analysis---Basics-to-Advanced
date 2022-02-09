@@ -124,6 +124,10 @@ The timing checks aren't met since the slack is negative.
 
 ![Screenshot from 2022-02-07 20-03-33](https://user-images.githubusercontent.com/73732594/152808162-776920d1-3ba1-449d-a0bf-13c76edbce7a.png)
 
+# Day-2 Summary
+
+Apart from setup and hold checks, STA also has other timing checks in place like clock gating checks, async pin checks and data to data checks. We also make a note of the rise and fall slew transitions. We also have to provide load analysis by specifying min and max capacitances on the IO net, and corresponding fanout load on ports and output pins. The skew between launch and capture clock waveforms also needs to be taken into account, the skew is positive if the capture flop clock leads the launch flop clock. The duty cycle of the clock is limited by various parameters apart from the technology node. Latch based designs allow more flexibility in timing and also aids time borrowing. A typical STA text report contains startpoint, endpoint, 'max' signifies setup time check and the nodes in the design mentioned as paths, whpse respective delays are taken into account.   
+
 # Day-2 Labs
 
 ## Liberty Files and Understanding Lib Parsing
