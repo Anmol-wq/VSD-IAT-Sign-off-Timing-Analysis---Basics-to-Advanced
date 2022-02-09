@@ -46,7 +46,7 @@ It starts with basics of Static Timing Analysis, timing paths, startpoint, endpo
   - [CRPR](#crpr)
   - [ECO](#eco)
 - [Acknowledgements:](#acknowledgements)
-- [References:](#references)
+- [Author:](#author)
 
 <!-- /code_chunk_output -->
 
@@ -126,7 +126,7 @@ The timing checks aren't met since the slack is negative.
 
 # Day-2 Summary
 
-Apart from setup and hold checks, STA also has other timing checks in place like clock gating checks, async pin checks and data to data checks. We also make a note of the rise and fall slew transitions. We also have to provide load analysis by specifying min and max capacitances on the IO net, and corresponding fanout load on ports and output pins. The skew between launch and capture clock waveforms also needs to be taken into account, the skew is positive if the capture flop clock leads the launch flop clock. The duty cycle of the clock is limited by various parameters apart from the technology node. Latch based designs allow more flexibility in timing and also aids time borrowing. A typical STA text report contains startpoint, endpoint, 'max' signifies setup time check and the nodes in the design mentioned as paths, whpse respective delays are taken into account.   
+Apart from setup and hold checks, STA also has other timing checks in place like clock gating checks, async pin checks and data to data checks. We also make a note of the rise and fall slew transitions. We also have to provide load analysis by specifying min and max capacitances on the IO net, and corresponding fanout load on ports and output pins. The skew between launch and capture clock waveforms also needs to be taken into account, the skew is positive if the capture flop clock leads the launch flop clock. The duty cycle of the clock is limited by various parameters apart from the technology node. Latch based designs allow more flexibility in timing and also aids time borrowing. A typical STA text report contains startpoint, endpoint, 'max' signifies setup time check and the nodes in the design mentioned as paths, whose respective delays are taken into account.   
 
 # Day-2 Labs
 
@@ -213,21 +213,21 @@ Functionally, it might seem like the first path, corresponds to the slack comput
   
   ![Screenshot from 2022-02-07 23-42-41](https://user-images.githubusercontent.com/73732594/152847313-5bad3d31-481b-430d-b235-5210887bcb26.png) 
 
-OpenTimer 2.1.0
-Time unit        : 1e-12 s
-Capacitance unit : 1e-15 F
-Voltage unit     : 1 V
-Current unit     : 0.001 A
-Power unit       : 1e-06 W
-Pins           : 22
-POs            : 1
-PIs            : 6
-Gates          : 3
-Nets           : 19
-Arcs           : 25
-SCCs           : 0
-Tests          : 6
-Cells          : 105
+OpenTimer 2.1.0 <br>
+Time unit        : 1e-12 s <br>
+Capacitance unit : 1e-15 F <br>
+Voltage unit     : 1 V <br>
+Current unit     : 0.001 A <br>
+Power unit       : 1e-06 W <br>
+Pins           : 22 <br>
+POs            : 1 <br>
+PIs            : 6 <br>
+Gates          : 3 <br>
+Nets           : 19 <br>
+Arcs           : 25 <br>
+SCCs           : 0 <br>
+Tests          : 6 <br>
+Cells          : 105 <br>
 # Day-5_Labs
   ## Revisit slack computation
   ![Screenshot from 2022-02-07 23-48-15](https://user-images.githubusercontent.com/73732594/152848018-392cb1af-684d-4ef0-9329-735edb5ddcb1.png)
@@ -237,6 +237,20 @@ Cells          : 105
 
   ## ECO
   ![Screenshot from 2022-02-07 23-52-54](https://user-images.githubusercontent.com/73732594/152848638-09978f8d-a4ad-40e7-805c-a0c47cc9c6a0.png)
+
+## Acknowledgements
+
+- [Kunal Ghosh](https://github.com/kunalg123), Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
+- [Vikas Sachdeva](https://vlsideepdive.com/)
+
+## Author
+
+[Anmol Saxena](https://www.linkedin.com/in/anmol-saxena-ee/), M.Tech ICT (2019-21), DA-IICT, Gandhinagar, Gujarat, India
+- Contact: anmol.saxena2016@outlook.com, 201911053@daiict.ac.in  <br>
+- System configuration during the undertaking:  <br>\
+-- Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz   <br>\
+-- Installed RAM: 8.00 GB (7.88 GB usable)  <br>\
+-- System type:	Windows 10 Pro, 64-bit operating system, x64-based processor  <br>
 
 
 
