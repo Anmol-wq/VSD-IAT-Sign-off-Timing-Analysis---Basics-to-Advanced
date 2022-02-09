@@ -241,7 +241,7 @@ Cells          : 105 <br>
 ## Acknowledgements
 
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
-- [Vikas Sachdeva](https://vlsideepdive.com/)
+- [Vikas Sachdeva](https://vlsideepdive.com/), Advisor, Tech and VLSI Coach, Trainer and Innovator at vlsideepdive.
 
 ## Author
 
@@ -250,7 +250,7 @@ Cells          : 105 <br>
 - System configuration during the undertaking:  <br>\
 -- Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz   <br>\
 -- Installed RAM: 8.00 GB (7.88 GB usable)  <br>\
--- System type:	Windows 10 Pro, 64-bit operating system, x64-based processor  <br>
+-- System type:	Ubuntu 18.04 LTS, 64-bit operating system, x64-based processor  <br>
 
 
 
