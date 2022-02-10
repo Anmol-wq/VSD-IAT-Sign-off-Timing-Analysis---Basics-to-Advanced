@@ -140,7 +140,7 @@ Exercises:
 • Find all the cells in simple_Late.lib.
 • Find all the pins of the cell NAND2_X1 in simple_Late.lib
 
-This could be done by some Tcl scripting it seems, will try and update as soon as possible.
+211 and 3.
 
 • What difference you see between NAND2_X1 and NAND3_X1
 
@@ -236,6 +236,11 @@ Arcs           : 25 <br>
 SCCs           : 0 <br>
 Tests          : 6 <br>
 Cells          : 105 <br>
+
+# Day-5_Summary
+
+In Synchronous clocks, events happen at a fixed phase relation whereas in asynchronous clocks that is untrue. Then there are logically exclusive clocks, which are passed through a mux logic, whereas in physically exclusive clocks, the sources are entirely different. set_clock_groups is used for establishing asynchronous and synchronous pairs. We can provide different properties like latency, uncertainty, transition and sense.
+
 # Day-5_Labs
   ## Revisit slack computation
   ![Screenshot from 2022-02-07 23-48-15](https://user-images.githubusercontent.com/73732594/152848018-392cb1af-684d-4ef0-9329-735edb5ddcb1.png)
